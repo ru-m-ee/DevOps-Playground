@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  svc1:
+    build: ./svc1
+    ports:
+      - "8000:8000"
+    depends_on:
+      - svc2
+
+  svc2:
+    build: ./svc2
+    ports:
+      - "8001:8001"
